@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { Web3Provider } from "@ethersproject/providers";
+import { Web3ReactProvider } from "@web3-react/core";
+import Homepage from "./components/Homepage.js";
+import About from "./components/About";
+import Faq from "./components/Faq";
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import  Titlebar  from "./components/Titlebar.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+    <Web3ReactProvider
+      getLibrary={(provider, connector) => new Web3Provider(provider)}
+    >
+      <Titlebar />
+      
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+        <Route path="/About">
+          <About />
+        </Route>
+        <Route path="/Faq">
+          <Faq />
+        </Route>
+      </Switch>
+    </Web3ReactProvider>
+    </Router>
+  )
 }
 
 export default App;
