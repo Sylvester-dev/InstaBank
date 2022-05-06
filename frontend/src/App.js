@@ -6,7 +6,6 @@ import Faq from "./components/Faq";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import  Titlebar  from "./components/Titlebar.js";
-import Dashboard from "./components/Dashboard.js";
 
 function App() {
   return (
@@ -25,9 +24,6 @@ function App() {
         </Route>
         <Route path="/Faq">
           <Faq />
-        </Route>
-        <Route path="/Dashboard">
-          <Dashboard />
         </Route>
       </Switch>
     </Web3ReactProvider>
