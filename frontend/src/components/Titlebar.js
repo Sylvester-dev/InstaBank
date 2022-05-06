@@ -31,7 +31,7 @@ const Titlebar = () => {
                 marginLeft: "20px",
               }}
             >
-              INSTASAFE INSURANCE
+              INSTABANK
             </Link>
           </Typography>
         </Grid>
@@ -62,7 +62,24 @@ const Titlebar = () => {
               >
                 FAQ
               </Link>
+              <Link
+                to="/Dashboard"
+                style={{
+                  textDecoration: "none",
+                  fontSize: "25px",
+                  color: "white",
+                  backgroundColor:"black",
+                  marginLeft: "20px",
+                }}
+              >
+                DASHBOARD
+              </Link>
+
+              
             </div>
+
+            
+            
 
           </Typography>
         </Grid>
