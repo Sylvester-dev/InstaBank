@@ -267,10 +267,45 @@ export default function About() {
             borderRadius: "50px",
           }}
         >
+          <div style={{ marginTop: "20px" }}>
+            <img
+              alt="CardImage"
+              src="https://ipfs.io/ipfs/bafkreiccqtd6ymohnhz6wyewpmugl32ngmntnmzrmh5wo5r36htpn75hla"
+              style={{
+                borderRadius: "10px",
+                height: "200px",
+                width: "200px",
+                marginLeft: "25%",
+                marginBottom: "20px",
+              }}
+            />
+            <h2 style={{ marginLeft: "25%", color: "#ebebeb" }}>
+              Vaibhav Ekka
+            </h2>
+            <CardText
+              style={{ marginLeft: "5%", marginRight: "5%", color: "#ebebeb" }}
+            >
+              Stay dedicated it’s not going to happen overnight.
+            </CardText>
+            <Button
+              style={{
+                alignItems: "center",
+                marginLeft: "40%",
+                marginRight: "auto",
+              }}
+              href="https://www.linkedin.com/in/vaibhav-ekka-26424118b/"
+            >
+              <img
+                alt="linkedin_prop"
+                src="https://img.icons8.com/material-outlined/50/000000/linkedin--v1.png"
+                style={{}}
+              />
+            </Button>
+          </div>
         </div>
       </div>
 
-      <p style={{ marginLeft: "45%" }}>Made with ❤️ by Team InstaBank</p>
+      <p style={{ marginLeft: "45%" }}>Made with ❤️ by Team InstaSafe</p>
     </>
   );
 }
