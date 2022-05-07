@@ -7,6 +7,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import  Titlebar  from "./components/Titlebar.js";
 import Dashboard from "./components/Dashboard.js";
+//import Depositpage from "../../../Depositpage.js";
+
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
         </Route>
         <Route path="/Dashboard">
           <Dashboard />
+        </Route>
+        <Route path="/Deposit">
+          {/* <Depositpage /> */}
         </Route>
       </Switch>
     </Web3ReactProvider>

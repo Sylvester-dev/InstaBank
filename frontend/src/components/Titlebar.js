@@ -26,9 +26,9 @@ const Titlebar = () => {
               to="/"
               style={{
                 textDecoration: "none",
-                fontSize: "25px",
+                fontSize: "22px",
                 color: "#262626",
-                marginLeft: "20px",
+                marginLeft: "10px",
               }}
             >
               INSTABANK
@@ -43,7 +43,7 @@ const Titlebar = () => {
                 to="/About"
                 style={{
                   textDecoration: "none",
-                  fontSize: "25px",
+                  fontSize: "22px",
                   color: "white",
                   backgroundColor:"black",
                 }}
@@ -54,10 +54,10 @@ const Titlebar = () => {
                 to="/Faq"
                 style={{
                   textDecoration: "none",
-                  fontSize: "25px",
+                  fontSize: "22px",
                   color: "white",
                   backgroundColor:"black",
-                  marginLeft: "20px",
+                  marginLeft: "10px",
                 }}
               >
                 FAQ
@@ -66,16 +66,28 @@ const Titlebar = () => {
                 to="/Dashboard"
                 style={{
                   textDecoration: "none",
-                  fontSize: "25px",
+                  fontSize: "22px",
                   color: "white",
                   backgroundColor:"black",
-                  marginLeft: "20px",
+                  marginLeft: "10px",
                 }}
               >
                 DASHBOARD
               </Link>
+              <Link
+                to="/Deposit"
+                style={{
+                  textDecoration: "none",
+                  fontSize: "22px",
+                  color: "white",
+                  backgroundColor:"black",
+                  marginLeft: "10px",
+                }}
+              >
+                DEPOSIT
+              </Link>
 
-              
+
             </div>
 
             
