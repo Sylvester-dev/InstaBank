@@ -29,6 +29,8 @@ function App() {
         <Route path="/Dashboard">
           <Dashboard />
         </Route>
+        <Route path="/Deposit">
+        </Route>
       </Switch>
     </Web3ReactProvider>
     </Router>
