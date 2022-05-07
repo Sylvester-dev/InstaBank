@@ -15,6 +15,7 @@
     "@web3-react/portis-connector": "^6.1.9",
     "ethers": "^5.0.31",
     "hardhat": "^2.0.10",
+    "mdbreact": "^4.26.1",
     "node-geocoder": "^3.27.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

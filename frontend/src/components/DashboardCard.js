@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import { Button, CardActionArea, CardActions } from '@material-ui/core';
 
 
-export default function DashboardCard(p) {
+export default function DashboardCard({p}) {
+  console.log(p)
   return (
     <Card sx={{ maxWidth: 100 }}>
     <CardActionArea>
@@ -18,7 +19,7 @@ export default function DashboardCard(p) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          pp
+          {}ghhhhhhh
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
