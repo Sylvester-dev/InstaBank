@@ -1,0 +1,39 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: LendingPool
+    network: rinkeby
+    source:
+      address: "0xdb5759904849Dd6AE0f4ab808d6C371aCC628D90"
+      abi: LendingPool
+      startBlock: 10441276
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Reserve
+        - UserReserve
+      abis:
+        - name: LendingPool
+          file: LendingPool\abis\LendingPool.json
+      eventHandlers:
+        - event: Borrow(indexed address,address,indexed address,uint256,uint256)
+          handler: handleBorrow
+        - event: Deposit(indexed address,address,indexed address,uint256)
+          handler: handleDeposit
+        - event: LiquidationCall(indexed address,indexed address,indexed
+            address,uint256,uint256,address,bool)
+          handler: handleLiquidationCall
+        - event: Repay(indexed address,indexed address,indexed address,uint256)
+          handler: handleRepay
+        - event: ReserveUsedAsCollateralDisabled(indexed address,indexed address)
+          handler: handleReserveUsedAsCollateralDisabled
+        - event: ReserveUsedAsCollateralEnabled(indexed address,indexed address)
+          handler: handleReserveUsedAsCollateralEnabled
+        - event: Withdraw(indexed address,indexed address,indexed address,uint256)
+          handler: handleWithdraw
+      file: LendingPool\LendingPool.wasm

@@ -410,6 +410,7 @@ function Depositpage() {
           <div>
             <a
               target="_blank"
+              rel="noreferrer"
               href={getBlockExplorerLink(chainId, asset.tokenAddress)}
             >
               {displayAddress(asset.tokenAddress)}

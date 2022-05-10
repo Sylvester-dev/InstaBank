@@ -1,0 +1,16 @@
+{
+  "name": "refi-subgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ Aka-sky/Refi",
+    "create-local": "graph create --node http://localhost:8020/ Aka-sky/Refi",
+    "remove-local": "graph remove --node http://localhost:8020/ Aka-sky/Refi",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 Aka-sky/Refi"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.27.0",
+    "@graphprotocol/graph-ts": "0.24.1"
+  }
+}
