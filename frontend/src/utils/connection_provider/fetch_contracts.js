@@ -1,16 +1,16 @@
 import { ethers } from "ethers";
 import { supportedNetworks } from "./network_config";
 
-import AddressesProvider from "../artifacts/contracts/AddressesProvider.sol/AddressesProvider.json";
-import ProtocolDataProvider from "../artifacts/contracts/data_provider/ProtocolDataProvider.sol/ProtocolDataProvider.json";
-import WalletBalanceProvider from "../artifacts/contracts/data_provider/WalletBalanceProvider.sol/WalletBalanceProvider.json";
-import LendingPool from "../artifacts/contracts/lendingpool/LendingPool.sol/LendingPool.json";
-import RefiCollection from "../artifacts/contracts/tokenization/RefiCollection.sol/RefiCollection.json";
-import WETHGateway from "../artifacts/contracts/utils/WETHGateway.sol/WETHGateway.json";
-import ERC20 from "../artifacts/contracts/mocks/MockERC20.sol/MockERC20.json";
-import aToken from "../artifacts/contracts/tokenization/AToken.sol/AToken.json";
-import MockWETH from "../artifacts/contracts/mocks/MockWETH.sol/MockWETH.json";
-import dToken from "../artifacts/contracts/tokenization/VariableDebtToken.sol/VariableDebtToken.json";
+import AddressesProvider from "../../artifacts/contracts/AddressesProvider.sol/AddressesProvider.json";
+import ProtocolDataProvider from "../../artifacts/contracts/data_provider/ProtocolDataProvider.sol/ProtocolDataProvider.json";
+import WalletBalanceProvider from "../../artifacts/contracts/data_provider/WalletBalanceProvider.sol/WalletBalanceProvider.json";
+import LendingPool from "../../artifacts/contracts/lendingpool/LendingPool.sol/LendingPool.json";
+import RefiCollection from "../../artifacts/contracts/tokenization/RefiCollection.sol/RefiCollection.json";
+import WETHGateway from "../../artifacts/contracts/utils/WETHGateway.sol/WETHGateway.json";
+import ERC20 from "../../artifacts/contracts/mocks/MockERC20.sol/MockERC20.json";
+import aToken from "../../artifacts/contracts/tokenization/AToken.sol/AToken.json";
+import MockWETH from "../../artifacts/contracts/mocks/MockWETH.sol/MockWETH.json";
+import dToken from "../../artifacts/contracts/tokenization/VariableDebtToken.sol/VariableDebtToken.json";
 
 const fetchContracts = async (provider, chainId) => {
   const addressProvider = new ethers.Contract(

@@ -27,6 +27,13 @@ const supportedNetworks = {
     rpcURL: "https://rinkeby-light.eth.linkpool.io/",
     address: "0xFaAcD658fe51552D7D64Ba530B60550F2Fd81a25",
   },
+
+  5: {
+    name: "Goerli",
+    tokenSymbol: "ETH",
+    rpcURL: "https://www.ethercluster.com/goerli",
+    address: "",
+  },
 };
 
 export { defaultChainId, supportedNetworks };

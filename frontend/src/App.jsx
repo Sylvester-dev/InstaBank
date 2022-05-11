@@ -8,7 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import AssetPage from "./pages/AssetPage";
 import Liquidation from "./pages/Liquidation";
-import Dashboard from "./pages/Dashboard.jsx";
+//import Dashboard from "./pages/Dashboard.jsx";
 import Faq from "./pages/Faq.jsx";
 import Insurance from "./pages/Insurance";
 import About from "./pages/About";
@@ -35,7 +35,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/assets/:id" element={<AssetPage />} />
           <Route path="/liquidation" element={<Liquidation />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/ins" element={<Insurance />} />
           <Route path="about" element={<About />} />
