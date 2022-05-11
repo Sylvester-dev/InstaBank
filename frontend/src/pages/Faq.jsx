@@ -1,5 +1,8 @@
 import React from 'react'
 import { AccordionItem,Accordion,AccordionHeader } from 'reactstrap';
+
+
+
 function Faq() {
   return (
     <div style={{ margin: "10px" }}>
@@ -7,6 +10,7 @@ function Faq() {
         <AccordionItem>
           <AccordionHeader>
             <strong> What we do? </strong>
+            
           </AccordionHeader>
           <AccordionItem style={{ margin: "10px" }}>
             We have developed a decentralized insurance platform where you pay

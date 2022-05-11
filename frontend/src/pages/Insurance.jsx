@@ -96,8 +96,8 @@ const Insurance = () => {
         }}
       >
         {!isRegistered && (
-          <Typography variant="h2">
-         <i> "If you wish to be protected against damages that could wreck your life, then you must purchase insurance today."</i>
+          <Typography variant="h1">
+         <i style={fontSize="30px"}> "If you wish to be protected against damages that could wreck your life, then you must purchase insurance today."</i>
           </Typography>
         )}
         {isRegistered && !isPayingPremiun && (
