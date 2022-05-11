@@ -1,0 +1,22 @@
+span  {
+    svg {
+        margin-left: 1px;
+    } 
+    svg:hover {
+        cursor: pointer;
+    }
+    svg:hover path {
+        stroke: black;
+        stroke-width: 0.4;
+    }
+}
+
+span svg:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 1rem;
+    width: 2rem;
+    background-color: black
+}

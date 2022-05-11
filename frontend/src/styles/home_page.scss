@@ -1,0 +1,27 @@
+.assets {
+  .asset-labels {
+    display: flex;
+    align-items: center;
+
+    .spread {
+      flex: 3;
+      text-align: left;
+    }
+
+    p {
+      flex: 1;
+      color: #8b8b8b;
+      font-size: 1.75rem;
+      font-weight: 400;
+      text-align: right;
+    }
+  }
+}
+
+hr {
+  border-width: 0.1px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  background-color: #f0f0f0;
+}

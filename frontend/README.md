@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+## Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Refi, (Reputation + Finance) is a variable interest rate lending and borrowing protocol that maintains a credit score for its users and provides benefits to them accordingly. It also issues on-chain credit cards to users for easy external payments. Refi takes its core functionality from [AAVE v2](https://github.com/aave/protocol-v2).
 
-## Available Scripts
+## Documentation
 
-In the project directory, you can run:
+### Branches
 
-### `npm start`
+1. master - This branch contains the frontend, subgraph and smart contracts for the Refi protocol on multiple chains. To test the protocol locally on hardhat, see [this](#installation)
+2. min-aave - This branch is a minimal implementation of AAVE v2 i.e. it only supports variable rate lending and borrowing. It is integrated with frontend and you can also test this implementation using below instructions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm install` in root directory
 
-### `npm test`
+### Initial Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a config.json file in the root directory with the following content
+```
+{   
+    "mumbaiPrivateKey": "**YOUR_MUMBAI_TESTNET_ACCOUNT_PRIVATE_KEY**",
+    "rinkebyPrivateKey1": "**YOUR_RINKEBY_ACCOUNT_PRIVATE_KEY**",
+    "rinkebyPrivateKey2": "**YOUR_ANOTHER_RINKEBY_ACCOUNT_PRIVATE_KEY**",
+    "rinkebyRPCUrl": "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+}
+```
+### To run tests
 
-### `npm run build`
+Run `npx hardhat test` in the root directory
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### To run locally on Hardhat
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+First, you will need to add the following environment variable to your .env file in the root folder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`REACT_APP_IMAGE_KEY`
 
-### `npm run eject`
+This is the API token to access your NFT.Storage service. [Know more](https://nft.storage/docs/)   
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Now, Open three terminals in root directory
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+First run `npx hardhat node` in one terminal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You can then copy the private keys of some of the accounts
+from the console and import it in your browser wallet e.g. MetaMask
+so that you can interact with the application. The network details are 
+also shown in the console which you can use to add the local network in your wallet 
+if not already present.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Then run `npx hardhat run scripts/deployForHardhat.js --network localhost` in the second terminal.
 
-## Learn More
+Copy the address of the deployed AddressesProvider contract from console.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Open the network_config.js file in **src/utils/connection_provider/network_config.js** file. Paste the copied address in the address field of Hardhat.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Finally run `npm run start` in third terminal.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

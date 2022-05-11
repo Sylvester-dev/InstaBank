@@ -4,10 +4,14 @@ import { Web3Provider } from "@ethersproject/providers";
 const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 
 // Goerli
-const F_DAI_X_ADDRESS = "0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00";
+// const F_DAI_X_ADDRESS = "0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00";
 
 // Matic
 //const F_DAI_X_ADDRESS = "0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f";
+
+// Rinekeby 
+
+const F_DAI_X_ADDRESS = "0x745861AeD1EEe363b4AaA5F1994Be40b1e05Ff90";
 
 const getSuperfluidSdk = async () => {
   const sf = new SuperfluidSDK.Framework({

@@ -1,0 +1,55 @@
+.pay-with-refi {
+  width: 24%;
+}
+
+h6 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.pay-btn {
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+}
+
+.input-box {
+  display: flex;
+
+  .select-box {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 0 0 8px;
+    background-color: #000;
+  }
+
+  select {
+    width: 80%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+  }
+
+  input {
+    border: none;
+    font-size: 1.6rem;
+    padding-right: 2rem;
+    border-radius: 0 8px 8px 0;
+    background-color: #f0f0f0;
+    text-align: right;
+    text-decoration: none;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  color: #101010;
+}

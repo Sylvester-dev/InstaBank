@@ -1,0 +1,14 @@
+type User @entity {
+  id: ID!
+  user: Bytes! # address
+  isBorrowingAny: Boolean!
+  reserves: [UserReserve!]! @derivedFrom(field: "user")
+}
+
+type UserReserve @entity {
+  id: ID!
+  user: User!
+  reserve: Bytes!
+  isUsingAsCollateral: Boolean!
+  isBorrowing: Boolean!
+}
