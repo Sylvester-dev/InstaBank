@@ -1,0 +1,62 @@
+@import "../../styles/colors";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    font-weight: 600;
+  }
+
+  .nav-options {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .tabs {
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      display: flex;
+
+      .nav-option {
+        font-size: 1.8rem;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+      }
+
+    .nav-option:hover::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        background-color: black;
+        height: 1px;
+        width: 100%;
+        transition: transform 250ms linear;
+    }
+
+    .nav-option-c::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        background-color: black;
+        height: 1px;
+        width: 100%;
+        transition: transform 250ms linear;
+    }
+    }
+
+    h6 {
+      padding: 1rem 2rem;
+      font-size: 1.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      border-radius: 1rem;
+      background-color: $grey-surface;
+    }
+  }
+}

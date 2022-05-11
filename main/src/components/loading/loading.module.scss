@@ -1,0 +1,65 @@
+.backdrop {
+    z-index: 1;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+
+.loadingContainer {
+    --total-time: 0.8s;
+    --n-dots: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load {
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.load1 {
+    animation: load-anim var(--total-time) linear infinite;
+}
+
+.load2 {
+    animation: load-anim var(--total-time) linear infinite;
+    animation-delay: calc(var(--total-time) / var(--n-dots));
+}
+
+.load3 {
+    animation: load-anim var(--total-time) linear infinite;
+    animation-delay: calc(2 * var(--total-time) / var(--n-dots));
+}
+
+.load4 {
+    animation: load-anim var(--total-time) linear infinite;
+    animation-delay: calc(3 * var(--total-time) / var(--n-dots));
+}
+
+.message {
+    font-size: 2rem;
+    text-align: center;
+}
+
+@keyframes load-anim {
+    0% {
+        transform: scale(1);
+    }
+
+    12.5% {
+        transform: scale(1.5);
+    }
+
+    25% {
+        transform: scale(1);
+    }
+}

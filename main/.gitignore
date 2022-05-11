@@ -1,0 +1,12 @@
+node_modules
+config.json
+.env
+
+#Hardhat files
+cache
+src/artifacts/@chainlink/
+src/artifacts/@openzeppelin/
+src/artifacts/build-info/
+src/artifacts/hardhat/
+
+src/artifacts/contracts/**/*.dbg.json

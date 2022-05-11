@@ -1,0 +1,102 @@
+.credit-flex {
+    position: relative;
+    display: flex;
+    width: 85%;
+    margin-inline: auto;
+
+    img {
+        width: 40rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 12rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 2rem
+    }
+
+    span a {
+        font-size: 1.8rem;
+        text-decoration: underline;
+    }
+
+    .opensea-btn {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        padding: 0.75rem 2rem;
+        border: 1.5px solid black;
+        cursor: pointer;
+
+        font-size: 2rem;
+        font-weight: 500;
+
+        div {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+
+}
+
+.data-flex {
+    display: flex;
+    width: 85%;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    .vr {
+        height: 10rem;
+        width: 0.1px;
+        background-color: black;
+    }
+}
+
+.dnb {
+    display: flex;
+    width: 85%;
+    margin-inline: auto;
+
+    .dnb-col {
+        flex: 1;
+
+        .dnb-asset-tile {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            height: 4rem;
+        }
+
+        h4 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        strong {
+            margin-left: auto;
+        }
+    }
+
+
+}

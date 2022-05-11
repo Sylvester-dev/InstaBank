@@ -1,0 +1,16 @@
+@use "sass:math";
+
+$spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}rem;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}rem;
+    }
+  }
+}

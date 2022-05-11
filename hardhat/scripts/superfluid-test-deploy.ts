@@ -1,6 +1,6 @@
 import { access } from "fs";
-import "hardhat";
-import { ethers } from "hardhat";
+//import "hardhat";
+const hre = require("hardhat");
 
 // Goerli
 // const SUPERFLUID_HOST = "0x22ff293e14F1EC3A09B137e9e06084AFd63adDF9";
@@ -21,8 +21,8 @@ const ACCEPTED_TOKEN = "0x745861AeD1EEe363b4AaA5F1994Be40b1e05Ff90";
 
 
 
-async function main() {
-  const contractFactory = await ethers.getContractFactory("SuperFluidTest");
+async function main( ) {
+  const contractFactory = await hre.ethers.getContractFactory("SuperFluidTest");
   const contract = await contractFactory.deploy(
     SUPERFLUID_HOST,
     SUPERFLUID_CFA,
